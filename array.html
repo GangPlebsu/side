@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Array – pełna lista metod</title>
+<style>
+  :root {
+    --color: #aa00cc;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    padding: 20px;
+  }
+  h1, h2 {
+    color: #333;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: var(--color);
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+</head>
+<body>
+
+<h1>Obiekt Array w JavaScript</h1>
+<p>Obiekt <code>Array</code> w JavaScript służy do przechowywania uporządkowanych zbiorów danych. Posiada wiele wbudowanych metod do manipulowania elementami tablicy.</p>
+
+<h2>Tworzenie i sprawdzanie tablic</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>Array.isArray(obj)</code></td><td>Sprawdza, czy dany obiekt jest tablicą.</td></tr>
+  <tr><td><code>Array.from(iterable)</code></td><td>Tworzy nową tablicę z obiektu iterowalnego lub podobnego do tablicy.</td></tr>
+  <tr><td><code>Array.of(...elements)</code></td><td>Tworzy nową tablicę z podanych elementów.</td></tr>
+</table>
+
+<h2>Dodawanie i usuwanie elementów</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>push(element)</code></td><td>Dodaje element na koniec tablicy i zwraca nową długość tablicy.</td></tr>
+  <tr><td><code>pop()</code></td><td>Usuwa ostatni element tablicy i zwraca go.</td></tr>
+  <tr><td><code>unshift(element)</code></td><td>Dodaje element na początek tablicy i zwraca nową długość.</td></tr>
+  <tr><td><code>shift()</code></td><td>Usuwa pierwszy element tablicy i zwraca go.</td></tr>
+  <tr><td><code>splice(start, deleteCount, ...items)</code></td><td>Usuwa, zastępuje lub dodaje elementy w dowolnym miejscu tablicy.</td></tr>
+</table>
+
+<h2>Dostęp i wyszukiwanie</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>includes(value)</code></td><td>Sprawdza, czy tablica zawiera określony element.</td></tr>
+  <tr><td><code>indexOf(value)</code></td><td>Zwraca indeks pierwszego wystąpienia elementu (lub -1, jeśli nie znaleziono).</td></tr>
+  <tr><td><code>lastIndexOf(value)</code></td><td>Zwraca indeks ostatniego wystąpienia elementu.</td></tr>
+  <tr><td><code>find(callback)</code></td><td>Zwraca pierwszy element, który spełnia warunek funkcji.</td></tr>
+  <tr><td><code>findIndex(callback)</code></td><td>Zwraca indeks pierwszego elementu, który spełnia warunek.</td></tr>
+</table>
+
+<h2>Iteracja po elementach</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>forEach(callback)</code></td><td>Wykonuje podaną funkcję dla każdego elementu tablicy.</td></tr>
+  <tr><td><code>map(callback)</code></td><td>Zwraca nową tablicę z wynikami funkcji zastosowanej do każdego elementu.</td></tr>
+  <tr><td><code>filter(callback)</code></td><td>Zwraca nową tablicę z elementami spełniającymi warunek.</td></tr>
+  <tr><td><code>reduce(callback, initialValue)</code></td><td>Redukuje tablicę do jednej wartości, wykonując funkcję na kolejnych elementach.</td></tr>
+  <tr><td><code>reduceRight(callback, initialValue)</code></td><td>Jak <code>reduce()</code>, ale iteruje od końca.</td></tr>
+  <tr><td><code>some(callback)</code></td><td>Zwraca <code>true</code>, jeśli chociaż jeden element spełnia warunek.</td></tr>
+  <tr><td><code>every(callback)</code></td><td>Zwraca <code>true</code>, jeśli wszystkie elementy spełniają warunek.</td></tr>
+</table>
+
+<h2>Sortowanie i odwracanie</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>sort(compareFn)</code></td><td>Sortuje elementy tablicy (domyślnie leksykograficznie).</td></tr>
+  <tr><td><code>reverse()</code></td><td>Odwraca kolejność elementów w tablicy.</td></tr>
+</table>
+
+<h2>Łączenie, kopiowanie i wycinanie</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>concat(...arrays)</code></td><td>Łączy dwie lub więcej tablic w nową.</td></tr>
+  <tr><td><code>slice(start, end)</code></td><td>Zwraca nową tablicę będącą fragmentem oryginalnej.</td></tr>
+  <tr><td><code>copyWithin(target, start, end)</code></td><td>Kopiuje część tablicy w inne miejsce w tej samej tablicy.</td></tr>
+</table>
+
+<h2>Spłaszczanie i mapowanie</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>flat(depth)</code></td><td>Spłaszcza zagnieżdżone tablice na zadany poziom głębokości.</td></tr>
+  <tr><td><code>flatMap(callback)</code></td><td>Najpierw mapuje elementy, a potem spłaszcza wynik o jeden poziom.</td></tr>
+</table>
+
+<h2>Wypełnianie i wartości</h2>
+<table>
+  <tr><th>Metoda</th><th>Opis</th></tr>
+  <tr><td><code>fill(value, start, end)</code></td><td>Wypełnia elementy tablicy daną wartością.</td></tr>
+  <tr><td><code>keys()</code></td><td>Zwraca iterator indeksów tablicy.</td></tr>
+  <tr><td><code>values()</code></td><td>Zwraca iterator wartości tablicy.</td></tr>
+  <tr><td><code>entries()</code></td><td>Zwraca iterator par [indeks, wartość].</td></tr>
+  <tr><td><code>join(separator)</code></td><td>Łączy elementy tablicy w ciąg tekstowy.</td></tr>
+  <tr><td><code>toString()</code></td><td>Zwraca reprezentację tablicy jako ciąg znaków.</td></tr>
+  <tr><td><code>toLocaleString()</code></td><td>Zwraca lokalną reprezentację elementów tablicy w formie tekstu.</td></tr>
+</table>
+
+</body>
+</html>

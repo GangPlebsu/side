@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Math - pełna lista</title>
+<style>
+  :root {
+    --color: #aa00cc
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    padding: 20px;
+  }
+  h1, h2 {
+    color: #333;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: var(--color);
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+</head>
+<body>
+
+<h1>Obiekt Math w JavaScript</h1>
+<p>Obiekt <code>Math</code> zawiera stałe i metody matematyczne. Nie jest konstruktorem — nie można go użyć z <code>new</code>.</p>
+
+<h2>Stałe (właściwości)</h2>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th>Opis</th>
+  </tr>
+  <tr><td><code>Math.E</code></td><td>Stała Eulera (≈ 2.718) — podstawa logarytmu naturalnego.</td></tr>
+  <tr><td><code>Math.LN2</code></td><td>Logarytm naturalny z 2 (≈ 0.693).</td></tr>
+  <tr><td><code>Math.LN10</code></td><td>Logarytm naturalny z 10 (≈ 2.302).</td></tr>
+  <tr><td><code>Math.LOG2E</code></td><td>Logarytm o podstawie 2 z E (≈ 1.442).</td></tr>
+  <tr><td><code>Math.LOG10E</code></td><td>Logarytm o podstawie 10 z E (≈ 0.434).</td></tr>
+  <tr><td><code>Math.PI</code></td><td>Liczba π (≈ 3.14159).</td></tr>
+  <tr><td><code>Math.SQRT1_2</code></td><td>1 / √2 (≈ 0.707).</td></tr>
+  <tr><td><code>Math.SQRT2</code></td><td>√2 (≈ 1.414).</td></tr>
+</table>
+
+<h2>Metody arytmetyczne</h2>
+<table>
+  <tr><th>Nazwa</th><th>Opis</th></tr>
+  <tr><td><code>Math.abs(x)</code></td><td>Zwraca wartość bezwzględną liczby.</td></tr>
+  <tr><td><code>Math.sign(x)</code></td><td>Zwraca znak liczby: 1, -1, 0, -0 lub NaN.</td></tr>
+  <tr><td><code>Math.trunc(x)</code></td><td>Usuwa część ułamkową (zachowuje tylko część całkowitą).</td></tr>
+  <tr><td><code>Math.round(x)</code></td><td>Zaokrągla do najbliższej liczby całkowitej.</td></tr>
+  <tr><td><code>Math.floor(x)</code></td><td>Zaokrągla w dół (do mniejszej liczby całkowitej).</td></tr>
+  <tr><td><code>Math.ceil(x)</code></td><td>Zaokrągla w górę (do większej liczby całkowitej).</td></tr>
+  <tr><td><code>Math.fround(x)</code></td><td>Konwertuje do 32-bitowej liczby zmiennoprzecinkowej.</td></tr>
+  <tr><td><code>Math.clz32(x)</code></td><td>Zwraca liczbę wiodących zer w 32-bitowej reprezentacji liczby.</td></tr>
+  <tr><td><code>Math.imul(a, b)</code></td><td>Mnoży dwie liczby 32-bitowe całkowite (bardziej precyzyjnie niż * dla dużych liczb).</td></tr>
+</table>
+
+<h2>Metody potęg i logarytmów</h2>
+<table>
+  <tr><th>Nazwa</th><th>Opis</th></tr>
+  <tr><td><code>Math.pow(x, y)</code></td><td>Podnosi x do potęgi y.</td></tr>
+  <tr><td><code>Math.sqrt(x)</code></td><td>Pierwiastek kwadratowy.</td></tr>
+  <tr><td><code>Math.cbrt(x)</code></td><td>Pierwiastek sześcienny.</td></tr>
+  <tr><td><code>Math.exp(x)</code></td><td>Oblicza e^x.</td></tr>
+  <tr><td><code>Math.expm1(x)</code></td><td>Oblicza e^x − 1 (dokładniejszy dla małych x).</td></tr>
+  <tr><td><code>Math.log(x)</code></td><td>Logarytm naturalny (ln x).</td></tr>
+  <tr><td><code>Math.log10(x)</code></td><td>Logarytm o podstawie 10.</td></tr>
+  <tr><td><code>Math.log2(x)</code></td><td>Logarytm o podstawie 2.</td></tr>
+  <tr><td><code>Math.log1p(x)</code></td><td>Oblicza log(1 + x) (dokładniejszy dla małych x).</td></tr>
+  <tr><td><code>Math.hypot(a, b, ...)</code></td><td>Oblicza √(a² + b² + …).</td></tr>
+</table>
+
+<h2>Funkcje trygonometryczne</h2>
+<table>
+  <tr><th>Nazwa</th><th>Opis</th></tr>
+  <tr><td><code>Math.sin(x)</code></td><td>Sinus (x w radianach).</td></tr>
+  <tr><td><code>Math.cos(x)</code></td><td>Kosinus (x w radianach).</td></tr>
+  <tr><td><code>Math.tan(x)</code></td><td>Tangens (x w radianach).</td></tr>
+  <tr><td><code>Math.asin(x)</code></td><td>Arcus sinus — zwraca kąt w radianach.</td></tr>
+  <tr><td><code>Math.acos(x)</code></td><td>Arcus cosinus — zwraca kąt w radianach.</td></tr>
+  <tr><td><code>Math.atan(x)</code></td><td>Arcus tangens — zwraca kąt w radianach.</td></tr>
+  <tr><td><code>Math.atan2(y, x)</code></td><td>Arcus tangens z dwóch argumentów (zwraca kąt punktu (x, y)).</td></tr>
+</table>
+
+<h2>Funkcje hiperboliczne</h2>
+<table>
+  <tr><th>Nazwa</th><th>Opis</th></tr>
+  <tr><td><code>Math.sinh(x)</code></td><td>Sinus hiperboliczny.</td></tr>
+  <tr><td><code>Math.cosh(x)</code></td><td>Kosinus hiperboliczny.</td></tr>
+  <tr><td><code>Math.tanh(x)</code></td><td>Tangens hiperboliczny.</td></tr>
+  <tr><td><code>Math.asinh(x)</code></td><td>Arcus sinus hiperboliczny.</td></tr>
+  <tr><td><code>Math.acosh(x)</code></td><td>Arcus cosinus hiperboliczny.</td></tr>
+  <tr><td><code>Math.atanh(x)</code></td><td>Arcus tangens hiperboliczny.</td></tr>
+</table>
+
+<h2>Inne przydatne metody</h2>
+<table>
+  <tr><th>Nazwa</th><th>Opis</th></tr>
+  <tr><td><code>Math.min(...values)</code></td><td>Zwraca najmniejszą z podanych wartości.</td></tr>
+  <tr><td><code>Math.max(...values)</code></td><td>Zwraca największą z podanych wartości.</td></tr>
+  <tr><td><code>Math.random()</code></td><td>Zwraca liczbę losową z zakresu [0, 1).</td></tr>
+</table>
+
+</body>
+</html>
